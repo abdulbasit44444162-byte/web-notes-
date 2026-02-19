@@ -19,6 +19,84 @@ console.log( "typeof d" ,typeof d);
 console.log("typeof g",typeof g)
 let h=Symbol("12");
 console.log("typeof g",typeof h)
+// --- Initial Variables ---
+let stringValue = "123.45";
+let numberValue = 42;
+let booleanValue = true;
+let emptyString = "";
+let nonNumericString = "pizza";
+let nullValue = null;
+let undefinedValue;
+
+console.log("--- Initial Values and Types ---");
+console.log(`stringValue: ${stringValue} (Type: ${typeof stringValue})`); // Output: stringValue: 123.45 (Type: string)
+console.log(`numberValue: ${numberValue} (Type: ${typeof numberValue})`); // Output: numberValue: 42 (Type: number)
+console.log(`booleanValue: ${booleanValue} (Type: ${typeof booleanValue})`); // Output: booleanValue: true (Type: boolean)
+console.log(`emptyString: ${emptyString} (Type: ${typeof emptyString})`); // Output: emptyString:  (Type: string)
+console.log(`nonNumericString: ${nonNumericString} (Type: ${typeof nonNumericString})`); // Output: nonNumericString: pizza (Type: string)
+console.log(`nullValue: ${nullValue} (Type: ${typeof nullValue})`); // Output: nullValue: null (Type: object) - Note: typeof null is object
+console.log(`undefinedValue: ${undefinedValue} (Type: ${typeof undefinedValue})`); // Output: undefinedValue: undefined (Type: undefined)
+
+
+// --- Explicit Conversion (Manual) ---
+
+console.log("\n--- Explicit Conversion Examples ---");
+
+// To Number
+let numFromString = Number(stringValue);
+console.log(`Number from stringValue: ${numFromString} (Type: ${typeof numFromString})`); // Output: 123.45 (Type: number)
+
+let numFromBoolean = Number(booleanValue);
+console.log(`Number from booleanValue: ${numFromBoolean} (Type: ${typeof numFromBoolean})`); // Output: 1 (Type: number)
+
+let numFromEmptyString = Number(emptyString);
+console.log(`Number from emptyString: ${numFromEmptyString} (Type: ${typeof numFromEmptyString})`); // Output: 0 (Type: number)
+
+let numFromNonNumericString = Number(nonNumericString);
+console.log(`Number from nonNumericString: ${numFromNonNumericString} (Type: ${typeof numFromNonNumericString})`); // Output: NaN (Type: number)
+
+let integerFromString = parseInt(stringValue);
+console.log(`parseInt from stringValue: ${integerFromString} (Type: ${typeof integerFromString})`); // Output: 123 (Type: number)
+
+// To String
+let strFromNumber = String(numberValue);
+console.log(`String from numberValue: "${strFromNumber}" (Type: ${typeof strFromNumber})`); // Output: "42" (Type: string)
+
+let strFromBoolean = booleanValue.toString();
+console.log(`String from booleanValue: "${strFromBoolean}" (Type: ${typeof strFromBoolean})`); // Output: "true" (Type: string)
+
+// To Boolean
+let boolFromNumber = Boolean(numberValue);
+console.log(`Boolean from numberValue: ${boolFromNumber} (Type: ${typeof boolFromNumber})`); // Output: true (Type: boolean)
+
+let boolFromEmptyString = !!emptyString; // Using double not operator (implicit in an expression)
+console.log(`Boolean from emptyString: ${boolFromEmptyString} (Type: ${typeof boolFromEmptyString})`); // Output: false (Type: boolean)
+
+let boolFromNull = Boolean(nullValue);
+console.log(`Boolean from nullValue: ${boolFromNull} (Type: ${typeof boolFromNull})`); // Output: false (Type: boolean)
+
+
+// --- Implicit Conversion (Coercion by JavaScript) ---
+
+console.log("\n--- Implicit Conversion Examples (Coercion) ---");
+
+let result1 = "5" + 2; // Number 2 is implicitly converted to a string for concatenation
+console.log(`"5" + 2 = ${result1} (Type: ${typeof result1})`); // Output: "52" (Type: string)
+
+let result2 = "5" - 2; // String "5" is implicitly converted to a number for subtraction
+console.log(`"5" - 2 = ${result2} (Type: ${typeof result2})`); // Output: 3 (Type: number)
+
+let result3 = true + 1; // Boolean true is implicitly converted to the number 1 for addition
+console.log(`true + 1 = ${result3} (Type: ${typeof result3})`); // Output: 2 (Type: number)
+
+if ("hello") { // Non-empty string is implicitly converted to true in a boolean context
+    console.log(`Condition "hello" is truthy`);
+}
+
+let numImplicit = +"123"; // Unary plus operator implicitly converts string to number
+console.log(`Unary +"123" = ${numImplicit} (Type: ${typeof numImplicit})`); // Output: 123 (Type: number)
+
+
 // control flow statements
 let j=4;
 let k=2;
@@ -189,4 +267,5 @@ arra.unshift("jangezkhhan")
  
 
  
+
  
