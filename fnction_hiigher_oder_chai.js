@@ -325,7 +325,9 @@ let val3;
        score++;
        
  } while (score<=10);
-
+//In JavaScript, the primary distinction is that
+//a for...in loop is for iterating over object property names (keys),
+//while a for...of loop is for iterating over the values of iterable objects like arrays and strings. 
 // FOR of its all array specific
 //["","",""]
 //[{},{},{}]
@@ -420,5 +422,6 @@ const mytotal=myn.reduce(function(acc,currval){
   return acc+currval
 },0)
 //console.log(mytotal);
+
 
 
