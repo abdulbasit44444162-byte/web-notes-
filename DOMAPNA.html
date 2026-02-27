@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!--Summary Table of Common DOM Methods
+Task 	Method/Property
+Find by ID	document.getElementById('id')
+Find by CSS	document.querySelector('.class')
+Change Text	element.textContent = 'New'
+Change HTML	element.innerHTML = '<b>New</b>'
+Change Style	element.style.property = 'value'
+Create Element	document.createElement('tag')
+Add Child	parent.appendChild(child)
+Remove	element.remove()222222              -->
+<!--<p id="demo">The original text.</p>-->
+<img id="logo" src="logo.png" alt="Company Logo">
+<p class="basit">heiiii</p>
+<button onclick="changeText()">Click Me</button>
+
+<script>
+    function changeText() {
+  // 1. Access the element using its unique ID
+  const myParagraph = document.getElementById("demo").innerHTML="basit khan"; 
+  
+
+}
+//let img = document.getAttribute('id');
+let img=document.querySelector("img")
+     let images=img.getAttribute("id")
+    console.log(images);
+    
+     
+  //const srcValue = img.getAttribute('src');
+          //const basit=srcValue.getAttribute('alt')
+ // console.log(srcValue); // Output: "logo.png"
+// here we change of attribute value using setAttribute
+
+let para=document.querySelector("p")
+console.log(para.setAttribute("class","khan")); // Changes the image source
+//console.log(img.setAttribute('alt', 'Updated Logo')); // Updates alt text
+
+</script>
+
+</body>
+</html>
